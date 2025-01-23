@@ -1,0 +1,6 @@
+langchain-google-genai 
+crewai 
+langchain-community 
+crewai-tools 
+python-dotenv
+duckduckgo-search
