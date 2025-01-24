@@ -113,7 +113,7 @@ The system generates the following outputs:
 
 ## Troubleshooting
 
-1. **Infinite Loop**: Ensure the LLM provider is correctly configured in `ChatGoogleGenerativeAI`. Check API keys and `LiteLLM` provider setup.
-2. **Dependency Issues**: Ensure `Visual Studio Build Tools` are installed and up to date.
+1. **Infinite Loop**: If using Gemini API Ensure the LLM provider is correctly configured in `ChatGoogleGenerativeAI`. Check API keys and `LiteLLM` provider setup.Use OpenAI for best output and performance
+2. **Dependency Issues**: Ensure `Visual Studio Build Tools` are installed and up to date. In it install C/C++ dev tools. 
 3. **Environment Variables**: Verify `.env` file configuration.
 
