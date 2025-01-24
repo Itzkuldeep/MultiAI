@@ -210,7 +210,7 @@ JobcmdAgents = Crew(
     verbose=True
 )
 
-job_application_inputs = {
+inputs = {
     'job_posting_url': 'https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/275319?utm_medium=jobboard&utm_source=LinkedIn',
     'github_url': 'https://github.com/Itzkuldeep',
     'personal_writeup': """Kuldeep is a skillful person with hands-on practice on different projects based on software development,
@@ -220,4 +220,4 @@ job_application_inputs = {
                       Proven track record of delivering AI-driven solutions and contributing to successful projects."""
 }
 
-result = JobcmdAgents.kickoff(inputs=job_application_inputs)
+result = JobcmdAgents.kickoff(inputs=inputs)
