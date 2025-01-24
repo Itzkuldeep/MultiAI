@@ -2,7 +2,6 @@ import os
 # from langchain_google_genai import ChatGoogleGenerativeAI #for Googleapi
 from crewai import Agent, Task, Crew
 # from langchain_community.tools import DuckDuckGoSearchRun 
-from utils import get_openai_api_key, get_serper_api_key
 from dotenv import load_dotenv
 from crewai_tools import (
   FileReadTool,
@@ -17,12 +16,16 @@ load_dotenv()
 os.getenv("SERPER_API_KEY")
 os.getenv("OPENAI_API_KEY")
 
+# openai_api_key = get_openai_api_key()
+# os.environ["OPENAI_MODEL_NAME"] = 'gpt-3.5-turbo'
+# os.environ["SERPER_API_KEY"] = get_serper_api_key()
+
 
 # # Setting gemini pro as llm
-# llm = ChatGoogleGenerativeAI(model="gemini-pro",
-#                              verbose = True,
-#                              temperature = 0.5,
-#                              google_api_key=os.getenv("GOOGLE_API_KEY"))
+# llm = ChatGoogleGenerativeAI(model="gemini/gemini-pro",
+#                             verbose = True,
+#                             temperature = 0.5,
+#                             google_api_key=os.getenv("GOOGLE_API_KEY"))
 
 
 # search_tool = DuckDuckGoSearchRun()
@@ -193,10 +196,14 @@ interview_preparation_task = Task(
 
 JobcmdAgents = Crew(
     agents=[keyword_manager,
+            profiler,
+            researcher,
             resume_strategist,
             interview_preparer],
 
     tasks=[keyword_manager_task,
+           research_task,
+           profile_task,
            resume_strategy_task,
            interview_preparation_task],
 
