@@ -41,7 +41,7 @@ Ensure the following are installed on your system:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/yourrepository.git](https://github.com/Itzkuldeep/MultiAI.git)
+   git clone https://github.com/Itzkuldeep/MultiAI.git
    cd yourrepository
    ```
 
